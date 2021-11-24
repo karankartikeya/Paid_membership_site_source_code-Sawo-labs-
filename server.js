@@ -1,5 +1,5 @@
 // This is a sample test API key. Sign in to see examples pre-filled with your key.
-const stripe = require('stripe')('YOUR_STRIPE_SECRET_KEY');
+const stripe = require('stripe')('sk_test_51JzGAASD41MokGjbSBOsJOleLha8SqxTnKihbEOboydkFvlY5sOt8rtqRVp2rna2Cm3JBj1RMcWPkl1fdDIQTffK00lQHL70Fx');
 const express = require('express');
 const app = express();
 const path = require("path");
@@ -8,7 +8,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-const priceId = 'YOUR_PRICE_ID';
+const priceId = 'price_1JzQOfSD41MokGjbLVPE6daG';
 const YOUR_DOMAIN = 'http://localhost:3000';
 
 app.use(express.static(path.join(__dirname, "public")));
@@ -75,7 +75,7 @@ app.post(
     // If you are testing with the CLI, find the secret by running 'stripe listen'
     // If you are using an endpoint defined with the API or dashboard, look in your webhook settings
     // at https://dashboard.stripe.com/webhooks
-    const endpointSecret = 'YOUR_STRIPE_API_KEY';
+    const endpointSecret = 'sk_test_51JzGAASD41MokGjbSBOsJOleLha8SqxTnKihbEOboydkFvlY5sOt8rtqRVp2rna2Cm3JBj1RMcWPkl1fdDIQTffK00lQHL70Fx';
     // Only verify the event if you have an endpoint secret defined.
     // Otherwise use the basic event deserialized with JSON.parse
     if (endpointSecret) {
